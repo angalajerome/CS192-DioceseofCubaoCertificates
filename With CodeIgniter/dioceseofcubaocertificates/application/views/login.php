@@ -1,136 +1,100 @@
-<?php session_start(); 
-  if (isset($_SESSION['uqnuh1'])){header("Location:db.php");} else {echo(" ");};
- ?>
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<?php echo link_tag('assets/css/loginTemplate.css')?>
+<?php echo link_tag('assets/css/singlePageTemplate.css')?>
+<html lang="en-US">
 <head>
-<style>
-div.container {
-    width: 100%;
-    background-color: #
-    min-height:100%;}
-
-header {
-    padding: 1em;
-    border-radius: 15px 15px 0px 0px;
-    color: yellow;
-    background-color: #003EFF;
-    clear: left;
-    text-align: center;}
-
-footer {
-    position: fixed;
-    left: 0;
-    clear: left;
-    bottom: 0;
-    color: yellow;
-    background-color: #003EFF;
-    width: 100%;
-    text-align: center;}
-
-nav {
-    face: arial;
-    border: 3px solid #FF6347;
-    float: left;
-    width: 55%;
-    min-height: 380px;
-    margin: 0;
-    padding: 1em;}
-
-nav ul {
-    face: arial;
-    list-style-type: none;
-    padding: 0;}
-
-nav ul a {
-    face: arial;
-    text-decoration: none;}
-
-article {
-    face: arial;
-    margin-left: 170px;
-    padding: 1em;
-    overflow: hidden;
-    min-height: 100%;}
-
-</style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roman Catholic Diocese of Cubao Certificates Database</title>
+<link rel="shortcut icon" href="logo.png">
+<!-- Main Stylesheet -->
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!-- Login Template -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-
-<div class="container">
-<header>
-  <h1>
-  <img src="images/logo.png" alt="Logo" style="width:85px;height:85px;" align="left">
-
-  <font padding="1px" face="arial">ROMAN CATHOLIC DIOCESE OF CUBAO</font><br>
-  <font size="5" face="arial">Certificates Database</font></h1>
-</header>
-
-<br>
-<?php $_SESSION['try2']=" ajujujujuju "; ?>
-<nav face="arial">
-  <ul>
-    <li><b><font size="5"><a href="#">FAQs</a></font></b></li>
-    <ul><i><b>Can I access my baptismal/confirmation certificate?</b></i></ul>
-    <ul>Only the authorized staff of the Diocese of Cubao are given accounts 
-to access the certificates database.</ul><br>
-    <ul><i><b>I<?php echo(" do not have access for ");?>the database, how can I have a copy of my baptismal/confirmation certificate?</b></i></ul>
-    <ul>You may inquire at the Catholic Parish Office of your municipality.</ul>
-    <br><br><br><br>
-    <li><b><font size="5"><a href="#">Contact Details</a></font></b>
-<text><br>For inquiries about this application, 
-you may contact the developers at leandrodetorres23@gmail.com</text>
-    </li>
-  </ul>
-</nav>
-
-<article>
-  <h1>To access certificates database and view statistics, log in using your credentials.</h1>
-
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-<form name="form1" method="post" action="checklogin.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>   </strong></td>
-</tr>
-<tr>
-<td width="78">Username</td>
-<td width="6">:</td>
-<td width="294"><input name="myusername" type="text" id="myusername"></td>
-</tr>
-<tr>
-<td>Password</td>
-<td>:</td>
-<td><input name="mypassword" type="password" id="mypassword"></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="Login"></td>
-</tr>
-</table>
-</td>
-</form>
-</tr>
-</table>
+<!-- Main Container -->
+<div class="container"> 
+  <header>
+  	<h1 align="center">
+  	<br>
+  	<img class="logo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo" style="width:85px;height:85px;">
+  	<font class="title" size="6">ROMAN CATHOLIC DIOCESE OF CUBAO</font>
+  	<br>
+	<font class="title" size="5">Certificates Database</font>
+  	</h1>
+  </header>
   
+  <!-- FAQ and Login Section -->
+  <footer>
+    <!-- FAQ Section -->
+    <article class="footer_column">
+	  <h2 class="faq">Frequently Asked Questions</h2>
+	  <p class="question_column">1. Can I access my baptismal/confirmation certificates?</p>
+	  <p class="text_column">Only authorized staff of the Diocese of Cubao are given accounts to access the certificates database.</p>
+	  <p class="question_column">2. I do not have access with the database, how can I get a copy of my baptismal/confirmation certificate?</p>
+	  <p class="text_column">You may inquire at the Catholic Parish Office of your municipality.</p>
+    </article>
+    <!-- Login Section -->
+    <article class="footer_column">
+      <h2 class="faq">An authorized staff of the Diocese of Cubao?</h2>
+      <div class="panel panel-default">
+		<style scoped type="text/css" media="screen">
+		@import url("css/loginTemplate.css");
+		</style>
+		<div class="panel-heading">
+		  <h3 class="panel-title">Log in using your credentials to access certificates database and view statistics</h3>
+		</div>
+		<div class="panel-body">
+			<?php echo validation_errors(); ?>
+			<form accept-charset="UTF-8" role="form" action ="<?php echo base_url('index.php/Checklogin_controller'); ?>" method = "POST">
+			<fieldset>
+				<div class="form-group">
+					<input class="form-control" placeholder="Username" name="username" type="text">
+				</div>
+				<div class="form-group">
+					<input class="form-control" placeholder="Password" name="password" type="password" value="">
+				</div>
+				<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+			</fieldset>
+			</form>
+		</div>
+	  </div>
+    </article>
+  </footer>
   
-  
-  
-
-
-</article>
-
-<footer>
-<i>
-Civitas Supra Montem Posita</i>
-</footer>
-
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <h2 class="hero_header">CONTACT DETAILS</h2>
+    <p class="hero_body">
+    Website: dioceseofcubao.ph
+    <br>
+    Phone: (02)723-5116
+	</p>
+    <br>
+    <h2 class="hero_header">ABOUT THE DEVELOPERS</h2>
+    <p class="hero_body">
+    This web application was developed by students from the Department of Computer Science of the University of the Philippines Diliman.
+    <br> 
+    For inquiries about this web application, you may contact the developers at leandrodetorres23@gmail.com
+    </p>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2017 - <strong>Group 1</strong></div>
 </div>
-
+<!-- Main Container Ends -->
 </body>
 </html>
-

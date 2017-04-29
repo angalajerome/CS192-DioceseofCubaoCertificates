@@ -26,7 +26,7 @@ class Checklogin_controller extends CI_Controller
    else
    {
      //Go to private area
-     redirect('/Baptism_controller', 'refresh');
+     redirect('/Statistics_controller', 'refresh');
    }
 
  }
@@ -46,6 +46,7 @@ class Checklogin_controller extends CI_Controller
      {
        $sess_array = array(
          'parishCode' => $row->parishCode,
+		 'userCode' => $row->userCode,
          'userName' => $row->userName
        );
        $this->session->set_userdata('logged_in', $sess_array);

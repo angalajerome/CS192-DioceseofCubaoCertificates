@@ -20,7 +20,8 @@ Class login_model extends CI_Model
 	{
 			$data = array(
         'accessDate' => date('Y-m-d H:i:s'),
-        'userCode' => $row['parishCode']
+		'userCode' => $row['userCode'],
+        'parishcode' => $row['parishCode']
 		);
 	}
 	 $this -> db ->insert('accesses',$data);

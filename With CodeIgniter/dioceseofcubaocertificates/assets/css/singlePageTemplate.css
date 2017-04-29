@@ -21,14 +21,13 @@ body {
 /* Navigation */
 header {
 	width: 100%;
-	height: 13%;
+	padding-bottom: 40px;
 	background-color: #003EFF;
-	border-bottom: 5px solid #717070;
+	border-bottom: 5px solid #FFFFFF;
     color: yellow;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     text-align: center;
-	letter-spacing: 3px;
-	border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 15px 15px;
 }
 .logo {
 	float: left;
@@ -55,7 +54,7 @@ header {
 	margin-left: 0px;
 }
 .text_column {
-	font-weight: normal;
+	font-weight: bold;
 	text-align: justify;
 	line-height: 25px;
 	margin-top: 0px;
@@ -83,7 +82,7 @@ footer {
 	padding-bottom: 500px;
 }
 .footer_column {
-	width: 50%;
+	width: 100%;
 	text-align: center;
 	padding-top: 30px;
 	float: left;
@@ -129,11 +128,12 @@ footer {
 }
 /* Copyright Section */
 .copyright {
+	position: inherit;
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: #717070;
-	color: #FFFFFF;
+	color: #FFF0F0;
 	text-transform: uppercase;
 	font-weight: lighter;
 	letter-spacing: 2px;

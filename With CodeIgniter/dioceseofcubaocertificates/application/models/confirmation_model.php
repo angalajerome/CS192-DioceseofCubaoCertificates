@@ -1,5 +1,5 @@
 <?php
-class baptism_model extends CI_Model
+class confirmation_model extends CI_Model
 {
 	function __construct() 
 	{
@@ -9,7 +9,7 @@ class baptism_model extends CI_Model
 	{
 	   $this->load->helper('date');
 	   $this -> db -> select('firstName, middleName, lastName, suffix, bDay, bMonth, bYear');
-	   $this -> db -> from('bapts');
+	   $this -> db -> from('confs');
 	   $this -> db -> where('firstName', $data['firstName']);
 	   $this -> db -> where('middleName', $data['middleName']);
 	   $this -> db -> where('lastName', $data['lastName']);
@@ -23,7 +23,7 @@ class baptism_model extends CI_Model
 	   if ($query->num_rows() == 0)
 	   {
 		// Inserting in Table(students) of Database(college)
-		$this->db->insert('bapts', $data);
+		$this->db->insert('confs', $data);
 		return TRUE;
 	   }
 	   else
@@ -32,15 +32,15 @@ class baptism_model extends CI_Model
 		return FALSE;
 	   }
 	}
-	function assign_baptcode ()
+	function assign_confcode ()
 	{
-	   $this -> db -> select_max('baptCode');
-	   $this -> db -> from('bapts');
+	   $this -> db -> select_max('confCode');
+	   $this -> db -> from('confs');
 	   
 	   $query = $this -> db -> get();
 	   foreach ($query->result_array() as $row)
 		{
-			$newcode = $row['baptCode'] + 1;
+			$newcode = $row['confCode'] + 1;
 		
 		return $newcode;
 		}

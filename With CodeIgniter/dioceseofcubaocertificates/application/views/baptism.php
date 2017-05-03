@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roman Catholic Diocese of Cubao Certificates Database</title>
-<link rel="shortcut icon" href="logo.png">
+<link rel="shortcut icon" href="<?php echo base_url('assets/images/logo.png'); ?>">
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="css/singlePageTemplate.css" type="text/css">
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -47,7 +47,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
  				<!-- User Information Section -->
-  				<p class="navbar-text">Welcome, <?php echo($username);?>!</p>
+  				<p class="navbar-text">Welcome, <?php echo($username);?> from <?php echo(qq($parishcode));?>!</p>
   				<!-- Logout Section -->
 				<button type="submit" onclick="location.href='<?php echo base_url('index.php/Logout_controller'); ?>';" class="btn btn-danger navbar-btn pull-right"><span class="glyphicon glyphicon-log-out"></span> Log Out</button>
 			</div>
@@ -62,7 +62,11 @@
 					<li class="active"><a href="#"><span class="glyphicon glyphicon-plus"></span> Add Baptismal Certificates</a></li>
 					<li><a href="<?php echo base_url('index.php/Confirmation_controller/index')?>"><span class="glyphicon glyphicon-plus"></span> Add Confirmation Certificates</a></li>
 					<li><a href="<?php echo base_url('index.php/Statistics_controller/index')?>"><span class="glyphicon glyphicon-stats"></span> Check Statistics</a></li>
-					<li><a href="<?php echo base_url('index.php/Adduser_controller/index')?>"><span class="glyphicon glyphicon-user"></span> Add Staff Account</a></li>
+					<?php if ($parishcode == 9999) {
+						echo('<li><a href="');
+						echo(base_url('index.php/Adduser_controller/index'));
+						echo('"><span class="glyphicon glyphicon-user"></span> Add Staff Account</a></li>');
+					}?>
 				</ul>
 			</div>
 		</nav>	
@@ -319,51 +323,97 @@
 			<div class="form-group">
 				<label for="baptismparish">Baptism Parish:</label>
 				<select class="form-control" id="baptismparish" name="baptParishCode">
-					<option value="2001">Christ the King Parish (Greenmeadows)</option>
-					<option value="5001">Christ the King Parish (Project 7)</option>
-					<option value="6001">Diocesan Shrine of St. Joseph</option>
-					<option value="6002">Holy Cross Parish</option>
-					<option value="3001">Holy Family Parish (GSIS)</option>
-					<option value="6003">Holy Family Parish (Kamias)</option>
-					<option value="1001">Holy Family Parish (Roxas District)</option>
-					<option value="4001">Immaculate Conception Parish (Damar)</option>
-					<option value="3002">Immaculate Conception Parish (Project 8)</option>
-					<option value="6004">Immaculate Heart of Mary Parish</option>
-					<option value="1002">Most Holy Redeemer Parish (Araneta)</option>
-					<option value="4002">Most Holy Redeemer Parish (Masambong)</option>
-					<option value="4003">National Shrine of Our Lady of Lourdes</option>
-					<option value="1003">National Shrine of Our Lady of Mount Carmel</option>
-					<option value="2002">Nativity of the Lord Parish</option>
-					<option value="1004">Our Lady of Fatima Parish</option>
-					<option value="3003">Our Lady of Hope Parish</option>
-					<option value="3004">Our Lady of Mount Carmel Parish (Project 6)</option>
-					<option value="6005">Our Lady of Pentecost Parish</option>
-					<option value="2004">Our Lady of Perpetual Help Parish – 13th Ave.</option>
-					<option value="3005">Our Lady of Perpetual Help Parish (Project 8)</option>
-					<option value="2003">Our Lady of the Miraculous Medal Parish</option>
-					<option value="3006">Parish of Mary, the Immaculate Conception</option>
-					<option value="5002">Parish of the Hearts of Jesus and Mary</option>
-					<option value="6007">Parish of the Lord of Divine Mercy</option>
-					<option value="5003">Resurrection of Our Lord Parish</option>
-					<option value="1005">Sacred Heart of Jesus Parish</option>
-					<option value="2006">Saint John Paul II Parish</option>
-					<option value="4004">Saint Joseph the Worker Parish (Balintawak)</option>
-					<option value="5005">Saint Jude Quasi-Parish</option>
-					<option value="1006">Saint Paul the Apostle Parish</option>
-					<option value="5004">San Antonio de Padua Parish</option>
-					<option value="6008">San Isidro Labrador Quasi-Parish</option>
-					<option value="3007">San Nicolas de Tolentino Parish</option>
-					<option value="2005">San Roque Parish</option>
-					<option value="6009">Santa Maria della Strada Parish</option>
-					<option value="4005">Santo Domingo Parish (La Naval de Manila Shrine)</option>
-					<option value="3008">Santo Niño Parish Shrine</option>
-					<option value="4006">Santuario de San Pedro Bautista Parish</option>
-					<option value="1007">Shrine of Jesus the Divine Word Parish</option>
-					<option value="4007">Sta. Perpetua Parish</option>
-					<option value="5006">Sta. Rita de Cascia Parish</option>
-					<option value="4008">Sta. Teresita del Niño Jesus Parish</option>
-					<option value="5007">Sto. Cristo de Bungad Parish</option>
-					<option value="2007">Transfiguration of our Lord Parish</option>
+					<option <?php if($parishcode==2001) echo(" selected "); ?> value=2001><?php qq(2001) ?></option>
+
+					<option <?php if($parishcode==5001) echo(" selected "); ?> value=5001><?php qq(5001) ?></option>
+
+					<option <?php if($parishcode==6001) echo(" selected "); ?> value=6001><?php qq(6001) ?></option>
+
+					<option <?php if($parishcode==6002) echo(" selected "); ?> value=6002><?php qq(6002) ?></option>
+
+					<option <?php if($parishcode==3001) echo(" selected "); ?> value=3001><?php qq(3001) ?></option>
+
+					<option <?php if($parishcode==6003) echo(" selected "); ?> value=6003><?php qq(6003) ?></option>
+
+					<option <?php if($parishcode==1001) echo(" selected "); ?> value=1001><?php qq(1001) ?></option>
+
+					<option <?php if($parishcode==4001) echo(" selected "); ?> value=4001><?php qq(4001) ?></option>
+
+					<option <?php if($parishcode==3002) echo(" selected "); ?> value=3002><?php qq(3002) ?></option>
+
+					<option <?php if($parishcode==6004) echo(" selected "); ?> value=6004><?php qq(6004) ?></option>
+
+					<option <?php if($parishcode==1002) echo(" selected "); ?> value=1002><?php qq(1002) ?></option>
+
+					<option <?php if($parishcode==4002) echo(" selected "); ?> value=4002><?php qq(4002) ?></option>
+
+					<option <?php if($parishcode==4003) echo(" selected "); ?> value=4003><?php qq(4003) ?></option>
+
+					<option <?php if($parishcode==1003) echo(" selected "); ?> value=1003><?php qq(1003) ?></option>
+
+					<option <?php if($parishcode==2002) echo(" selected "); ?> value=2002><?php qq(2002) ?></option>
+
+					<option <?php if($parishcode==1004) echo(" selected "); ?> value=1004><?php qq(1004) ?></option>
+
+					<option <?php if($parishcode==3003) echo(" selected "); ?> value=3003><?php qq(3003) ?></option>
+
+					<option <?php if($parishcode==3004) echo(" selected "); ?> value=3004><?php qq(3004) ?></option>
+
+					<option <?php if($parishcode==6005) echo(" selected "); ?> value=6005><?php qq(6005) ?></option>
+
+					<option <?php if($parishcode==2004) echo(" selected "); ?> value=2004><?php qq(2004) ?></option>
+
+					<option <?php if($parishcode==3005) echo(" selected "); ?> value=3005><?php qq(3005) ?></option>
+
+					<option <?php if($parishcode==2003) echo(" selected "); ?> value=2003><?php qq(2003) ?></option>
+
+					<option <?php if($parishcode==3006) echo(" selected "); ?> value=3006><?php qq(3006) ?></option>
+
+					<option <?php if($parishcode==5002) echo(" selected "); ?> value=5002><?php qq(5002) ?></option>
+
+					<option <?php if($parishcode==6006) echo(" selected "); ?> value=6006><?php qq(6006) ?></option>
+
+					<option <?php if($parishcode==6007) echo(" selected "); ?> value=6007><?php qq(6007) ?></option>
+
+					<option <?php if($parishcode==5003) echo(" selected "); ?> value=5003><?php qq(5003) ?></option>
+
+					<option <?php if($parishcode==1005) echo(" selected "); ?> value=1005><?php qq(1005) ?></option>
+
+					<option <?php if($parishcode==2006) echo(" selected "); ?> value=2006><?php qq(2006) ?></option>
+
+					<option <?php if($parishcode==4004) echo(" selected "); ?> value=4004><?php qq(4004) ?></option>
+
+					<option <?php if($parishcode==5005) echo(" selected "); ?> value=5005><?php qq(5005) ?></option>
+
+					<option <?php if($parishcode==1006) echo(" selected "); ?> value=1006><?php qq(1006) ?></option>
+
+					<option <?php if($parishcode==5004) echo(" selected "); ?> value=5004><?php qq(5004) ?></option>
+
+					<option <?php if($parishcode==6008) echo(" selected "); ?> value=6008><?php qq(6008) ?></option>
+
+					<option <?php if($parishcode==3007) echo(" selected "); ?> value=3007><?php qq(3007) ?></option>
+
+					<option <?php if($parishcode==2005) echo(" selected "); ?> value=2005><?php qq(2005) ?></option>
+
+					<option <?php if($parishcode==6009) echo(" selected "); ?> value=6009><?php qq(6009) ?></option>
+
+					<option <?php if($parishcode==4005) echo(" selected "); ?> value=4005><?php qq(4005) ?></option>
+
+					<option <?php if($parishcode==3008) echo(" selected "); ?> value=3008><?php qq(3008) ?></option>
+
+					<option <?php if($parishcode==4006) echo(" selected "); ?> value=4006><?php qq(4006) ?></option>
+
+					<option <?php if($parishcode==1007) echo(" selected "); ?> value=1007><?php qq(1007) ?></option>
+
+					<option <?php if($parishcode==4007) echo(" selected "); ?> value=4007><?php qq(4007) ?></option>
+
+					<option <?php if($parishcode==5006) echo(" selected "); ?> value=5006><?php qq(5006) ?></option>
+
+					<option <?php if($parishcode==4008) echo(" selected "); ?> value=4008><?php qq(4008) ?></option>
+
+					<option <?php if($parishcode==5007) echo(" selected "); ?> value=5007><?php qq(5007) ?></option>
+
+					<option <?php if($parishcode==2007) echo(" selected "); ?> value=2007><?php qq(2007) ?></option>
 				</select>
 			</div>
 			<br>
@@ -618,3 +668,54 @@
 <!-- Main Container Ends -->
 </body>
 </html>
+<?php
+  function qq($q){
+      if ($q==1001) {echo 'Holy Family Parish (Roxas District)';}
+  elseif ($q==1002) {echo 'Most Holy Redeemer Parish (Araneta)';}
+  elseif ($q==1003) {echo 'National Shrine of Our Lady of Mount Carmel';}
+  elseif ($q==1004) {echo 'Our Lady of Fatima Parish';}
+  elseif ($q==1005) {echo 'Sacred Heart of Jesus Parish';}
+  elseif ($q==1006) {echo 'Saint Paul the Apostle Parish';}
+  elseif ($q==1007) {echo 'Shrine of Jesus the Divine Word Parish';}
+  elseif ($q==2001) {echo 'Christ the King Parish (Greenmeadows)';}
+  elseif ($q==2002) {echo 'Nativity of the Lord Parish';}
+  elseif ($q==2003) {echo 'Our Lady of the Miraculous Medal Parish';}
+  elseif ($q==2004) {echo 'Our Lady of Perpetual Help Parish – 13th Ave.';}
+  elseif ($q==2005) {echo 'San Roque Parish';}
+  elseif ($q==2006) {echo 'Saint John Paul II Parish';}
+  elseif ($q==2007) {echo 'Transfiguration of our Lord Parish';}
+  elseif ($q==3001) {echo 'Holy Family Parish (GSIS)';}
+  elseif ($q==3002) {echo 'Immaculate Conception Parish (Project 8)';}
+  elseif ($q==3003) {echo 'Our Lady of Hope Parish';}
+  elseif ($q==3004) {echo 'Our Lady of Mount Carmel Parish (Project 6)';}
+  elseif ($q==3005) {echo 'Our Lady of Perpetual Help Parish (Project 8)';}
+  elseif ($q==3006) {echo 'Parish of Mary, the Immaculate Conception';}
+  elseif ($q==3007) {echo 'San Nicolas de Tolentino Parish';}
+  elseif ($q==3008) {echo 'Santo Niño Parish Shrine';}
+  elseif ($q==4001) {echo 'Immaculate Conception Parish (Damar)';}
+  elseif ($q==4002) {echo 'Most Holy Redeemer Parish (Masambong)';}
+  elseif ($q==4003) {echo 'National Shrine of Our Lady of Lourdes';}
+  elseif ($q==4004) {echo 'Saint Joseph the Worker Parish (Balintawak)';}
+  elseif ($q==4005) {echo 'Santo Domingo Parish (La Naval de Manila Shrine)';}
+  elseif ($q==4006) {echo 'Santuario de San Pedro Bautista Parish';}
+  elseif ($q==4007) {echo 'Sta. Perpetua Parish';}
+  elseif ($q==4008) {echo 'Sta. Teresita del Niño Jesus Parish';}
+  elseif ($q==5001) {echo 'Christ the King Parish (Project 7)';}
+  elseif ($q==5002) {echo 'Parish of the Hearts of Jesus and Mary';}
+  elseif ($q==5003) {echo 'Resurrection of Our Lord Parish';}
+  elseif ($q==5004) {echo 'San Antonio de Padua Parish';}
+  elseif ($q==5005) {echo 'Saint Jude Quasi-Parish';}
+  elseif ($q==5006) {echo 'Sta. Rita de Cascia Parish';}
+  elseif ($q==5007) {echo 'Sto. Cristo de Bungad Parish';}
+  elseif ($q==6001) {echo 'Diocesan Shrine of St. Joseph';}
+  elseif ($q==6002) {echo 'Holy Cross Parish';}
+  elseif ($q==6003) {echo 'Holy Family Parish (Kamias)';}
+  elseif ($q==6004) {echo 'Immaculate Heart of Mary Parish';}
+  elseif ($q==6005) {echo 'Our Lady of Pentecost Parish';}
+  elseif ($q==6006) {echo 'Parish of the Holy Sacrifice';}
+  elseif ($q==6007) {echo 'Parish of the Lord of Divine Mercy';}
+  elseif ($q==6008) {echo 'San Isidro Labrador Quasi-Parish';}
+  elseif ($q==6009) {echo 'Santa Maria della Strada Parish';}
+  else {echo 'Diocese of Cubao';}
+    }
+  ?>

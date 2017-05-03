@@ -169,6 +169,271 @@ Class statistics_model extends CI_Model
    $query = $this -> db -> get();
    return $query->num_rows(); 
  }
+ 
+ function countJanuaryBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',1);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countJanuaryConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',1);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countFebruaryBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',2);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countFebruaryConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',2);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countMarchBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',3);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countMarchConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',3);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countAprilBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',4);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countAprilConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',4);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countMayBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',5);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countMayConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',5);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countJuneBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',6);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countJuneConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',6);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countJulyBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',7);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countJulyConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',7);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countAugustBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',8);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countAugustConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',8);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countSeptemberBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',9);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countSeptemberConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',9);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countOctoberBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',10);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countOctoberConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',10);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countNovemberBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',11);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countNovemberConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',11);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countDecemberBapts()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('bapts');
+   $this -> db -> where('MONTH(registered)',12);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
+  function countDecemberConfs()
+ {
+	date_default_timezone_set("Asia/Manila");
+	$a = date("Y");
+   $this -> db -> select('*');
+   $this -> db -> from('confs');
+   $this -> db -> where('MONTH(registered)',12);
+   $this -> db -> where('YEAR(registered)',$a);
+   $query = $this -> db -> get();
+   return $query->num_rows(); 
+ }
 }
 
  

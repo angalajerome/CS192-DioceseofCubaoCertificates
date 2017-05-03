@@ -34,6 +34,31 @@ class Statistics_controller extends CI_Controller
 	 $data['ConfsVicariateSantaRita'] = $this->statistics_model->countVicariateSantaRitaConfs();
 	 $data['BaptsVicariateStJoseph'] = $this->statistics_model->countVicariateStJosephBapts();
 	 $data['ConfsVicariateStJoseph'] = $this->statistics_model->countVicariateStJosephConfs();
+	 $data['BaptsJanuary'] = $this->statistics_model->countJanuaryBapts();
+	 $data['ConfsJanuary'] = $this->statistics_model->countJanuaryConfs();
+	 $data['BaptsFebruary'] = $this->statistics_model->countFebruaryBapts();
+	 $data['ConfsFebruary'] = $this->statistics_model->countFebruaryConfs();
+	 $data['BaptsMarch'] = $this->statistics_model->countMarchBapts();
+	 $data['ConfsMarch'] = $this->statistics_model->countMarchConfs();
+	 $data['BaptsApril'] = $this->statistics_model->countAprilBapts();
+	 $data['ConfsApril'] = $this->statistics_model->countAprilConfs();
+	 $data['BaptsMay'] = $this->statistics_model->countMayBapts();
+	 $data['ConfsMay'] = $this->statistics_model->countMayConfs();
+	 $data['BaptsJune'] = $this->statistics_model->countJuneBapts();
+	 $data['ConfsJune'] = $this->statistics_model->countJuneConfs();
+	 $data['BaptsJuly'] = $this->statistics_model->countJulyBapts();
+	 $data['ConfsJuly'] = $this->statistics_model->countJulyConfs();
+	 $data['BaptsAugust'] = $this->statistics_model->countAugustBapts();
+	 $data['ConfsAugust'] = $this->statistics_model->countAugustConfs();
+	 $data['BaptsSeptember'] = $this->statistics_model->countSeptemberBapts();
+	 $data['ConfsSeptember'] = $this->statistics_model->countSeptemberConfs();
+	 $data['BaptsOctober'] = $this->statistics_model->countOctoberBapts();
+	 $data['ConfsOctober'] = $this->statistics_model->countOctoberConfs();
+	 $data['BaptsNovember'] = $this->statistics_model->countNovemberBapts();
+	 $data['ConfsNovember'] = $this->statistics_model->countNovemberConfs();
+	 $data['BaptsDecember'] = $this->statistics_model->countDecemberBapts();
+	 $data['ConfsDecember'] = $this->statistics_model->countDecemberConfs();
+	 
      $this->load->view('statistics', $data);
 	 
    }

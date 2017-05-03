@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roman Catholic Diocese of Cubao Certificates Database</title>
-<link rel="shortcut icon" href="logo.png">
+<link rel="shortcut icon" href="<?php echo base_url('assets/images/logo.png'); ?>">
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="css/singlePageTemplate.css" type="text/css">
 <link rel="stylesheet" href="css/bootstrap.css">

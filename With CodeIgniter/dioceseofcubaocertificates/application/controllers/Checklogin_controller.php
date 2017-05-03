@@ -26,7 +26,7 @@ class Checklogin_controller extends CI_Controller
    else
    {
      //Go to private area
-     redirect('/Statistics_controller', 'refresh');
+     redirect('/Search_controller', 'refresh');
    }
 
  }

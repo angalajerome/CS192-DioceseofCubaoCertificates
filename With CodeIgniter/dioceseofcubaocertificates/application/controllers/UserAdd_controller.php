@@ -15,6 +15,7 @@ class UserAdd_controller extends CI_Controller
 	   $this->load->library('form_validation');
 	   $session_data = $this->session->userdata('logged_in');
        $data['username'] = $session_data['userName'];
+	   $data['parishcode'] = $session_data['parishCode'];
 	   $this->form_validation->set_rules('NewUserName','New User Name', 'required');
 	   $this->form_validation->set_rules('NewPassword', 'New Password','required');
 	   $this->form_validation->set_rules('ConfirmPassword','Confirm Password', 'required|matches[NewPassword]');

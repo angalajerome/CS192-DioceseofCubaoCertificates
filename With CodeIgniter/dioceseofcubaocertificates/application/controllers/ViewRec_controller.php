@@ -23,20 +23,25 @@ class ViewRec_controller extends CI_Controller
 			'endMonth' => $this->input->post('endMonth'),
 			'endYear' => $this->input->post('endYear'),
 	);
+
 	 $data['recBapts'] = $this->viewrec_model->getRecBapts($datum);
-	 $data['recConfs'] = $this->viewrec_model->getRecConfs($datum);
-	 
-	 if ($data['recBapts']->num_rows() == 0 && $data['recConfs']->num_rows() == 0)
-	 {
-		 echo '<script language="javascript">';
-		 echo 'alert("No Results")';
+	 // $data['recBapts2'] = $this->viewrec_model->getRecBapts2($datum);
+	 $date = new DateTime();
+	 $date->setDate($datum['startYear'], $datum['startMonth'],0);
+	  echo '<script language="javascript">';
+		 echo 'alert("'.date_format($date,"Y/m").'")';
 		 echo '</script>';
-		 redirect('/Statistics_controller', 'refresh');
-	 }
-	 else
-	 {
+	 // if ($data['recBapts']->num_rows() == 0 && $data['recConfs']->num_rows() == 0)
+	 // {
+		 // echo '<script language="javascript">';
+		 // echo 'alert("No Results")';
+		 // echo '</script>';
+		 // redirect('/Statistics_controller', 'refresh');
+	 // }
+	 // else
+	 // {
 		$this->load->view('recresults', $data); 
-	 }
+	 // }
      
 	 
    }

@@ -67,37 +67,39 @@
 				<div class="form-group">
 					<input type="hidden" name="confCode" <?php echo("value=".$row['confCode']." ");?>>
 					<label for="firstname">First Name:</label>
-					<input type="text" class="form-control" id="firstname" name="cfName" <?php echo("value=".$row['firstName']." ");?>>
+					<input type="text" class="form-control" id="firstname" name="cfName" value = "<?php echo($row['firstName']);?>">
 				</div>
 				<br>
 				<!-- Middle Name Section -->
 				<div class="form-group">
 					<label for="middlename">Middle Name:</label>
-					<input type="text" class="form-control" id="middlename" name="cmName" <?php echo("value=".$row['middleName']." ");?>>
+					<input type="text" class="form-control" id="middlename" name="cmName" value = "<?php echo($row['middleName']);?>">
 				</div>
 				<br>
 				<!-- Last Name Section -->
 				<div class="form-group">
 					<label for="lastname">Last Name:</label>
-					<input type="text" class="form-control" id="lastname" name="clName" <?php echo("value=".$row['lastName']." ");?>>
+					<input type="text" class="form-control" id="lastname" name="clName" value = "<?php echo($row['lastName']);?>");?>>
 				</div>
 				<br>
 				<!-- Suffix Section -->
 				<div class="form-group">
 					<label for="suffix">Suffix:</label>
-					<input type="text" class="form-control" id="suffix" name="csx" <?php echo("value=".$row['suffix']." ");?>>
+					<input type="text" class="form-control" id="suffix" name="csx" value = "<?php echo($row['suffix']);?>">
 				</div>
 				<br>
 				<!-- Father's Full Name Section -->
 				<div class="form-group">
+					<?php echo($row['father']);?>
 					<label for="fathersname">Father's Full Name:</label>
-					<input type="text" class="form-control" id="fathersname" name="pop" <?php echo("value=".$row['father']." ");?>>
+					<input type="text" class="form-control" id="fathersname" name="pop" value = "<?php echo($row['father']);?>">
 				</div>
 				<br>
 				<!-- Mother's Full Name Section -->
 				<div class="form-group">
+					<?php echo($row['mother']);?>
 					<label for="mothersname">Mother's Full Name:</label>
-					<input type="text" class="form-control" id="mothersname" name="mom" <?php echo("value=".$row['mother']." ");?>>
+					<input type="text" class="form-control" id="mothersname" name="mom" value = "<?php echo($row['mother']);?>">
 				</div>		
 				<br>
 				<label>Birthdate:</label>
@@ -511,25 +513,25 @@
 				<!-- Confirmation Priest's Full Name Section -->
 				<div class="form-group">
 					<label for="confirmationpriestfullname">Confirmation Bishop's Full Name:</label>
-					<input type="text" class="form-control" id="confirmationpriestfullname" name="cBishopName" <?php echo("value=".$row['cBishopName']." ");?>>
+					<input type="text" class="form-control" id="confirmationpriestfullname" name="cBishopName" value = "<?php echo($row['cBishopName']);?>">
 				</div>
 				<br>
 				<!-- Confirmation Admin's Name Section -->
 				<div class="form-group">
 					<label for="adminname">Confirmation Admin's Name:</label>
-					<input type="text" class="form-control" id="adminname" name="confAdmin" <?php echo("value=".$row['confAdmin']." ");?>>
+					<input type="text" class="form-control" id="adminname" name="confAdmin" value = "<?php echo($row['confAdmin']);?>">
 				</div>
 				<br>
 				<!-- Confirmation Sponsor 1 Name Section -->
 				<div class="form-group">
 					<label for="sponsor1name">Sponsor 1 Name:</label>
-					<input type="text" class="form-control" id="sponsor1name" name="cSpA" <?php echo("value=".$row['cSpA']." ");?>>
+					<input type="text" class="form-control" id="sponsor1name" name="cSpA" value = "<?php echo($row['cSpA']);?>">
 				</div>
 				<br>
 				<!-- Confirmation Sponsor 2 Name Section -->
 				<div class="form-group">
 					<label for="sponsor2name">Sponsor 2 Name:</label>
-					<input type="text" class="form-control" id="sponsor2name" name="cSpB" <?php echo("value=".$row['cSpB']." ");?>>
+					<input type="text" class="form-control" id="sponsor2name" name="cSpB" value = "<?php echo($row['cSpB']);?>">
 				</div>
 				<br>
 			</div>
@@ -538,21 +540,21 @@
 					<!-- Confirmation Book Number Section -->
 					<div class="form-group">
 						<label for="confirmationbooknumber">Book Number:</label>
-						<input type="number" class="form-control" id="confirmationbooknumber" min="1" max="100" name="cBookNum" <?php echo("value=".$row['cBookNum']." ");?>>
+						<input type="number" class="form-control" id="confirmationbooknumber" min="1" max="100" name="cBookNum" value = "<?php echo($row['cBookNum']);?>">
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<!-- Confirmation Page Number Section -->
 					<div class="form-group">
 						<label for="confirmationpagenumber">Page Number:</label>
-						<input type="number" class="form-control" id="confirmationpagenumber" min="1" max="100" name="cPageNum" <?php echo("value=".$row['cPageNum']." ");?>>
+						<input type="number" class="form-control" id="confirmationpagenumber" min="1" max="100" name="cPageNum" value = "<?php echo($row['cPageNum']);?>">
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<!-- Confirmation Line Number Section -->
 					<div class="form-group">
 						<label for="confirmationlinenumber">Line Number:</label>
-						<input type="number" class="form-control" id="confirmationlinenumber" min="1" max="100" name="cLineNum" <?php echo("value=".$row['cLineNum']." ");?>>
+						<input type="number" class="form-control" id="confirmationlinenumber" min="1" max="100" name="cLineNum" value = "<?php echo($row['cLineNum']);?>">>
 					</div>
 				</div>
 			</div>
